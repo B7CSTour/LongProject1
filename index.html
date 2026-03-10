@@ -1,93 +1,80 @@
 <html>
 <head>
-<title>CS Website Tour</title>
-
-<style>
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.header {
-    background-color: #e6e6e6;
-    padding: 40px;
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.middle {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-}
-
-.link-button {
-    font-size: 20px;
-    padding: 12px 25px;
-    background-color: #0077cc;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.team {
-    margin-top: 10px;
-}
-
-.team-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.team ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 20px;
-}
-
-.team li {
-    margin: 4px 0;
-}
-
-</style>
+    <link rel="stylesheet" href="index.css">
+    <title>CS Website Tour</title>
 </head>
 
 <body>
 
 <div class="header">
-CS Website Tour
+    CS Website Tour
+</div>
+
+<div class="navbar">
+    <a href="#videos">Video Tutorials</a>
+    <a href="#capabilities">Student Capabilities</a>
+    <a href="#faq">FAQ</a>
+    <a href="#servers">How to Access CS Servers</a>
+    <a href="#history">History</a>
 </div>
 
 <div class="middle">
 
-<a class="link-button"
-href="https://www.cs.umb.edu/~hdeblois/cs410/s26/longproj-02/EnockAyiku_CSWebsiteTourAndUpdate_cs410-02.pdf"
-target="_blank">
-View Project Requirements Here
-</a>
+    <a class="link-button"
+       href="https://www.cs.umb.edu/~hdeblois/cs410/s26/longproj-02/EnockAyiku_CSWebsiteTourAndUpdate_cs410-02.pdf"
+       target="_blank">
+        View Project Requirements Here
+    </a>
 
-<div class="team">
+    <div class="team">
 
-<div class="team-title">Team 7</div>
+        <div class="team-title">Team 7</div>
 
-<ul>
-<li>Member Name 1</li>
-<li>Member Name 2</li>
-<li>Member Name 3</li>
-<li>Member Name 4</li>
-<li>Member Name 5</li>
-<li>Member Name 6</li>
-</ul>
+        <ul>
+            <li>Hagop Ketchedjian</li>
+            <li>Member Name 2</li>
+            <li>Member Name 3</li>
+            <li>Member Name 4</li>
+            <li>Member Name 5</li>
+            <li>Member Name 6</li>
+        </ul>
 
-</div>
+    </div>
+
+    <div class="section" id="videos">
+        <div class="section-title">Video Tutorials</div>
+        <div class="section-content">
+            Tutorials demonstrating how to navigate the CS website.
+        </div>
+    </div>
+
+    <div class="section" id="capabilities">
+        <div class="section-title">Student Capabilities</div>
+        <div class="section-content">
+            Overview of the tools, programming environments, and systems students can access through the CS department.
+        </div>
+    </div>
+
+    <div class="section" id="faq">
+        <div class="section-title">FAQ</div>
+        <div class="section-content">
+            Answers to common questions regarding courses, server access, assignments, and technical support.
+        </div>
+    </div>
+
+    <div class="section" id="servers">
+        <div class="section-title">How to Access CS Servers</div>
+        <div class="section-content">
+            Instructions for connecting to CS department servers using SSH and other remote access tools.
+        </div>
+    </div>
+
+    <div class="section" id="history">
+        <div class="section-title">History</div>
+        <div class="section-content">
+            Background information on the development of the CS department and its computing infrastructure.
+        </div>
+    </div>
 
 </div>
 
