@@ -10,6 +10,7 @@ Member Roles:
 - Martin - CS Servers & Technical Resources
 
 TO DO LIST:
+- Every member adds name to homepage
 - Make seperate files for each member role
 - Make general Website Style like the umb.edu website
-- Make a GitHub Pages website so we can view the website on a browser.
+- Each member works on their individual file, which is connected to the overall website
