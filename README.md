@@ -1,7 +1,7 @@
 # LongProject1
 
 Member Roles:
-- Hagop - Frequently Asked Questions (FAQ) section
+- Hagop - Frequently Asked Questions (FAQ) Section
   + [Enter Longer Description of Artifact of Work]
 - Manav - Student Resources Section
   + [Enter Longer Description of Artifact of Work]
