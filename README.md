@@ -19,3 +19,4 @@ Member Roles:
 TO DO LIST:
 - Make seperate files for each member role (1 left)
 - Each member works on their individual file, which is connected to the overall website
+- Add what the website does overall based on client request in the Home section of the website.
