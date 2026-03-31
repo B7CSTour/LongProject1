@@ -17,6 +17,5 @@ Member Roles:
   + [Enter Longer Description of Artifact of Work]
 
 TO DO LIST:
-- Every member adds name to homepage (2 left)
 - Make seperate files for each member role (1 left)
 - Each member works on their individual file, which is connected to the overall website
