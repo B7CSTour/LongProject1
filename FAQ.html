@@ -1,35 +1,83 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
-    <title>Frequently Asked Questions</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Section</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+  }
 
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .faq-item {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-question:hover {
+    background-color: #f0f0f0;
+  }
+
+  .faq-answer {
+    padding: 0 20px 15px 20px;
+    display: none;
+    font-weight: normal;
+    color: #333;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .arrow {
+    transform: rotate(90deg);
+  }
+
+</style>
+</head>
 <body>
 
-<div class="header">
-    CS Website Tour
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Question Here
+    <span class="arrow">&#9654;</span>
+  </div>
+  <div class="faq-answer">Answer Here</div>
 </div>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="Student_Resources.html">Student Resources</a>
-    <a href="Tutorials.html">Tutorials</a>
-    <a href="Servers.html">How to Access CS Servers</a>
-    <a href="FAQ.html">FAQ</a>
-</div>
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
 
-<div class="middle">
-
-    <div class="section">
-        <div class="section-title">Frequently Asked Questions</div>
-
-        <div class="section-content">
-            Enter short desc. here
-        </div>
-
-    </div>
-
-</div>
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
+      const answer = item.querySelector('.faq-answer');
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
 
 </body>
 </html>
