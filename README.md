@@ -2,7 +2,7 @@
 
 Member Roles:
 - Hagop - Frequently Asked Questions (FAQ) Section
-  + [Enter Longer Description of Artifact of Work]
+  + Responsible for adding common questions and their answers, which will help users find solutions immediately, rather than emailing the operator and having to wait. The FAQ of the old CS website only had 15 questions, and the questions themselves weren't commonly asked questions.
 - Manav - Student Resources Section
   + [Enter Longer Description of Artifact of Work]
 - John - Facilities & Locations Update
