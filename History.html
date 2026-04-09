@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>History - CS Website Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #f4f2ee;
+            --surface: #ffffff;
+            --dark: #1a1a1a;
+            --mid: #4a4a4a;
+            --muted: #888;
+            --accent: #1d5fb4;
+            --accent-light: #e8f0fd;
+            --border: #ddd;
+            --sans: 'IBM Plex Sans', sans-serif;
+            --mono: 'IBM Plex Mono', monospace;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--dark);
+            min-height: 100vh;
+        }
+
+        /* HEADER & NAVBAR */
+        .header {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .navbar {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            padding: 0.5rem;
+        }
+
+        .navbar a {
+            color: #ccc;
+            text-decoration: none;
+            padding: 0.4rem 0.85rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: background 0.15s;
+        }
+
+        .navbar a:hover { background: #555; color: #fff; }
+        .navbar a.active { background: var(--accent); color: #fff; }
+
+        /* PAGE LAYOUT */
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .page-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .page-sub {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+            font-family: var(--mono);
+        }
+
+        /* INTRO CARD */
+        .intro-card {
+            background: var(--accent-light);
+            border: 1px solid #b6d0f5;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--mid);
+        }
+
+        .intro-card strong { color: var(--dark); }
+
+        /* TIMELINE */
+        .timeline { position: relative; padding-left: 2rem; }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.55rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.75rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.56rem;
+            top: 0.85rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid var(--surface);
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .timeline-item.highlight::before {
+            background: #e67e22;
+            box-shadow: 0 0 0 2px #e67e22;
+        }
+
+        .timeline-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.1rem 1.3rem;
+            transition: box-shadow 0.15s;
+        }
+
+        .timeline-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+        }
+
+        .timeline-item.highlight .timeline-card {
+            border-left: 3px solid #e67e22;
+        }
+
+        .timeline-year {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item.highlight .timeline-year { color: #e67e22; }
+
+        .timeline-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.875rem;
+            color: var(--mid);
+            line-height: 1.6;
+        }
+
+        /* STATS ROW */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin: 2.5rem 0;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.1rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: var(--mono);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 0.3rem;
+        }
+
+        /* LOCATION SECTION */
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .location-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .location-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .location-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .location-desc {
+            font-size: 0.875rem;
+            color: var(--mid);
+            line-height: 1.6;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffc107;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .page-title { font-size: 1.4rem; }
+            .timeline { padding-left: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">CS Website Tour</div>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="Student_Resources.html">Student Resources</a>
+    <a href="Tutorials.html">Tutorials</a>
+    <a href="Technical_Resources.html">Technical Resources</a>
+    <a href="Servers.html">How to Access CS Servers</a>
+    <a href="History.html" class="active">History</a>
+    <a href="FAQ.html">FAQ</a>
+</div>
+
+<div class="page">
+
+    <div class="page-title">📖 History of the CS Department</div>
+    <div class="page-sub">UMass Boston — Department of Computer Science</div>
+
+    <div class="intro-card">
+        The <strong>UMass Boston Department of Computer Science</strong> has grown from a small academic program
+        into a thriving department offering undergraduate, graduate, and certificate programs.
+        Over the decades, the department has expanded its research, faculty, and facilities
+        to serve thousands of students in the Greater Boston area.
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="stat-number">1965</div>
+            <div class="stat-label">UMass Boston Founded</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">3rd</div>
+            <div class="stat-label">Floor, McCormack Hall</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">BS/BA</div>
+            <div class="stat-label">Undergraduate Degrees</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">MS/PhD</div>
+            <div class="stat-label">Graduate Programs</div>
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="section-title">Department Timeline</div>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <div class="timeline-year">1965</div>
+                <div class="timeline-title">UMass Boston is Founded</div>
+                <div class="timeline-desc">
+                    The University of Massachusetts Boston is established as an urban public
+                    research university, beginning with a small set of academic departments
+                    including early computing courses.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <div class="timeline-year">1970s</div>
+                <div class="timeline-title">Computer Science Program Begins</div>
+                <div class="timeline-desc">
+                    The formal Computer Science program is introduced, offering foundational
+                    courses in programming, data structures, and algorithms to meet growing
+                    demand in the technology field.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <div class="timeline-year">1980s – 1990s</div>
+                <div class="timeline-title">Program Expansion</div>
+                <div class="timeline-desc">
+                    The department expands its curriculum to include advanced topics such as
+                    artificial intelligence, databases, networking, and software engineering.
+                    Graduate programs are introduced to support research and advanced study.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <div class="timeline-year">2000s</div>
+                <div class="timeline-title">Research Growth</div>
+                <div class="timeline-desc">
+                    Faculty research expands significantly in areas including machine learning,
+                    bioinformatics, distributed systems, and human-computer interaction.
+                    The department begins receiving major research grants and funding.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <div class="timeline-year">2010s</div>
+                <div class="timeline-title">New Programs and Partnerships</div>
+                <div class="timeline-desc">
+                    The department introduces certificate programs, an IT degree, and an
+                    Honors Program. Partnerships with local tech companies provide students
+                    with internship and career opportunities in the Greater Boston area.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item highlight">
+            <div class="timeline-card">
+                <div class="tag">⭐ Major Milestone</div>
+                <div class="timeline-year">2021</div>
+                <div class="timeline-title">Move to McCormack Hall, 3rd Floor</div>
+                <div class="timeline-desc">
+                    The CS department relocates to the <strong>3rd Floor of McCormack Hall</strong>,
+                    providing modernized office spaces, updated labs, and improved facilities
+                    for both students and faculty. This move represents a significant upgrade
+                    in the department's physical infrastructure.
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <div class="timeline-year">2022 – Present</div>
+                <div class="timeline-title">Continued Growth and Innovation</div>
+                <div class="timeline-desc">
+                    The department continues to grow with new faculty hires, research grants
+                    exceeding $1.2 million, and an expanding student body. Programs in
+                    AI, data science, and cybersecurity reflect current industry demand.
+                    The CS website itself is now maintained and improved by students as
+                    part of the CS410 course.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LOCATION -->
+    <div class="section-title">Current Location</div>
+    <div class="location-card">
+        <div class="location-icon">🏛️</div>
+        <div>
+            <div class="location-title">McCormack Hall, 3rd Floor</div>
+            <div class="location-desc">
+                The Department of Computer Science is currently located on the
+                <strong>3rd Floor of McCormack Hall</strong> at UMass Boston.
+                The department office can be reached at <strong>617.287.6475</strong>
+                or by email at <strong>csinfo@cs.umb.edu</strong>.
+                The campus is located at 100 Morrissey Blvd, Boston, MA 02125.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>CS Website Tour &mdash; Team 7 &mdash; Spring 2026 &mdash; Muhammad Khushnood</footer>
+
+</body>
+</html>
