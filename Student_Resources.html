@@ -37,7 +37,7 @@
       margin: 0 auto;
     }
 
-    /* 🔥 NEW NAVBAR */
+    /* 🔥 NAVBAR */
     .navbar {
       background-color: #00509e;
       padding: 12px 0;
@@ -50,10 +50,20 @@
       margin: 0 18px;
       font-weight: bold;
       font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: 4px;
     }
 
+    /* 🟡 Hover */
     .navbar a:hover {
-      text-decoration: underline;
+      background-color: #f2c230;
+      color: #003b73;
+    }
+
+    /* 🟡 Active tab */
+    .navbar a.active {
+      background-color: #f2c230;
+      color: #003b73;
     }
 
     .container {
@@ -91,8 +101,9 @@
       transform: translateY(-5px);
     }
 
+    /* 🟡 Card Titles */
     .card h3 {
-      color: #00509e;
+      color: #003366;
       margin-bottom: 12px;
       font-size: 1.3rem;
     }
@@ -111,33 +122,15 @@
       font-size: 0.93rem;
     }
 
+    /* 🟡 Yellow Links */
     .card a {
-      color: #003366;
+      color: #f2c230;
       text-decoration: none;
       font-weight: bold;
     }
 
     .card a:hover {
       text-decoration: underline;
-    }
-
-    .section {
-      margin-top: 50px;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .section h2 {
-      color: #003366;
-      margin-bottom: 15px;
-      font-size: 1.6rem;
-    }
-
-    .section p {
-      margin-bottom: 12px;
-      font-size: 0.97rem;
     }
 
     footer {
@@ -172,10 +165,10 @@
     </p>
   </header>
 
-  <!-- 🔥 TEAM NAVBAR -->
+  <!-- 🟡 NAVBAR -->
   <div class="navbar">
     <a href="index.html">Home</a>
-    <a href="Student_Resources.html">Student Resources</a>
+    <a href="Student_Resources.html" class="active">Student Resources</a>
     <a href="Facilities.html">Facilities</a>
     <a href="Tutorials.html">Tutorials</a>
     <a href="Servers.html">How to Access CS Servers</a>
@@ -193,66 +186,52 @@
     </div>
 
     <div class="cards">
-      <div class="card" id="internships">
+      <div class="card">
         <h3>Internships</h3>
-        <p>
-          Internships help students gain real-world experience in software development,
-          cybersecurity, data science, IT support, and other technical fields.
-        </p>
+        <p>Gain real-world experience in software, cybersecurity, and data science.</p>
         <ul>
-          <li>Search for internships through Handshake</li>
-          <li>Attend university career fairs</li>
-          <li>Apply on company websites</li>
-          <li>Build experience before graduation</li>
+          <li>Handshake</li>
+          <li>Career fairs</li>
+          <li>Company websites</li>
         </ul>
-        <p><a href="#">View Internship Resources</a></p>
+        <p><a href="#">View Internship Resources →</a></p>
       </div>
 
-      <div class="card" id="careers">
+      <div class="card">
         <h3>Career Opportunities</h3>
-        <p>
-          Computer Science students can explore different career paths and prepare for
-          jobs through resume workshops, interview practice, and professional guidance.
-        </p>
+        <p>Prepare for jobs through resume help and interview practice.</p>
         <ul>
-          <li>Resume and cover letter support</li>
-          <li>Interview preparation</li>
-          <li>Career fairs and employer events</li>
-          <li>Networking with professionals</li>
+          <li>Resume support</li>
+          <li>Interview prep</li>
+          <li>Networking</li>
         </ul>
-        <p><a href="#">Explore Career Support</a></p>
+        <p><a href="#">Explore Careers →</a></p>
       </div>
 
-      <div class="card" id="clubs">
+      <div class="card">
         <h3>CS Clubs</h3>
-        <p>
-          Student clubs help you meet other students, work on projects, attend events,
-          and build your technical and leadership skills.
-        </p>
+        <p>Join clubs, attend events, and build skills.</p>
         <ul>
-          <li>Join coding and technology clubs</li>
-          <li>Participate in hackathons</li>
-          <li>Collaborate on group projects</li>
-          <li>Connect with peers in CS</li>
+          <li>Hackathons</li>
+          <li>Group projects</li>
+          <li>Community events</li>
         </ul>
-        <p><a href="#">See Student Organizations</a></p>
+        <p><a href="#">See Clubs →</a></p>
       </div>
 
-      <div class="card" id="research">
+      <div class="card">
         <h3>Research Opportunities</h3>
-        <p>
-          Students can work with faculty on research in areas such as artificial intelligence,
-          machine learning, cybersecurity, and data science.
-        </p>
+        <p>Work with faculty and gain academic experience.</p>
         <ul>
-          <li>Work with faculty mentors</li>
-          <li>Join research labs and projects</li>
-          <li>Gain hands-on academic experience</li>
-          <li>Prepare for graduate study or industry roles</li>
+          <li>Research labs</li>
+          <li>Faculty mentorship</li>
+          <li>Graduate prep</li>
         </ul>
-        <p><a href="#">Learn About Research</a></p>
+        <p><a href="#">Learn Research →</a></p>
       </div>
     </div>
+
+  </div>
 
   <footer>
     <p>UMass Boston | Computer Science Student Resources</p>
