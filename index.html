@@ -5,16 +5,22 @@
     <title>CS Website Tour</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         :root {
-            --bg: #f4f2ee;
+            --bg: #f4f7fb;
             --surface: #ffffff;
-            --dark: #1a1a1a;
-            --mid: #4a4a4a;
+            --dark-blue: #003366;
+            --nav-blue: #00509e;
+            --yellow: #f2c230;
+            --yellow-dark: #ddb11f;
+            --text-dark: #1a1a1a;
+            --text-mid: #4a4a4a;
             --muted: #888;
-            --accent: #1d5fb4;
-            --accent-light: #e8f0fd;
             --border: #ddd;
             --mono: 'IBM Plex Mono', monospace;
             --sans: 'IBM Plex Sans', sans-serif;
@@ -23,47 +29,89 @@
         body {
             font-family: var(--sans);
             background: var(--bg);
-            color: var(--dark);
+            color: var(--text-dark);
             min-height: 100vh;
         }
 
-        /* ── HERO ── */
+        .header {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            background-color: var(--nav-blue);
+            padding: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: 0.2s ease;
+        }
+
+        .navbar a:hover {
+            background-color: var(--yellow);
+            color: var(--dark-blue);
+        }
+
+        .navbar a.active {
+            background-color: var(--yellow);
+            color: var(--dark-blue);
+        }
+
         .hero {
             background: var(--surface);
             border-bottom: 1px solid var(--border);
             text-align: center;
             padding: 3.5rem 1rem 3rem;
         }
+
         .hero-tag {
             font-family: var(--mono);
             font-size: 0.7rem;
             letter-spacing: 0.15em;
-            color: var(--accent);
+            color: var(--nav-blue);
             text-transform: uppercase;
             margin-bottom: 0.75rem;
         }
+
         .hero h1 {
             font-size: clamp(1.8rem, 4vw, 3rem);
             font-weight: 700;
             letter-spacing: -0.02em;
-            color: var(--dark);
+            color: var(--text-dark);
         }
+
         .hero-cta {
             display: inline-block;
             margin-top: 1.75rem;
-            background: var(--accent);
-            color: #fff;
+            background: var(--yellow);
+            color: var(--dark-blue);
             font-family: var(--sans);
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             padding: 0.75rem 1.75rem;
             border-radius: 6px;
             transition: background 0.15s, transform 0.1s;
         }
-        .hero-cta:hover { background: #174d98; transform: translateY(-1px); }
 
-        /* ── LAYOUT ── */
+        .hero-cta:hover {
+            background: var(--yellow-dark);
+            transform: translateY(-1px);
+        }
+
         .page {
             max-width: 1000px;
             margin: 0 auto;
@@ -74,24 +122,27 @@
             align-items: start;
         }
 
-        /* ── SIDEBAR: TEAM ── */
         .sidebar {
             position: sticky;
             top: 70px;
         }
+
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
+
         .card-header {
-            background: var(--dark);
+            background: #111;
             padding: 0.75rem 1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+
         .card-header span {
             font-family: var(--mono);
             font-size: 0.72rem;
@@ -99,8 +150,18 @@
             text-transform: uppercase;
             color: #aaa;
         }
-        .dot { width: 7px; height: 7px; border-radius: 50%; background: #444; }
-        .dot.g { background: #3fb950; }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #444;
+        }
+
+        .dot.g {
+            background: #3fb950;
+        }
+
         .team-label {
             padding: 0.85rem 1rem 0.4rem;
             font-family: var(--mono);
@@ -109,6 +170,7 @@
             text-transform: uppercase;
             color: var(--muted);
         }
+
         .member {
             display: flex;
             align-items: center;
@@ -116,22 +178,31 @@
             padding: 0.55rem 1rem;
             transition: background 0.12s;
         }
-        .member:hover { background: var(--accent-light); }
+
+        .member:hover {
+            background: #fff8dc;
+        }
+
         .avatar {
-            width: 30px; height: 30px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            background: var(--accent-light);
-            border: 1.5px solid var(--accent);
-            display: flex; align-items: center; justify-content: center;
+            background: #fff8dc;
+            border: 1.5px solid var(--yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 0.7rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--dark-blue);
             flex-shrink: 0;
         }
+
         .member-name {
             font-size: 0.875rem;
-            color: var(--dark);
+            color: var(--text-dark);
         }
+
         .card-footer {
             border-top: 1px solid var(--border);
             padding: 0.6rem 1rem;
@@ -140,8 +211,11 @@
             color: var(--muted);
         }
 
-        /* ── MAIN CONTENT ── */
-        .main-content { display: flex; flex-direction: column; gap: 1.25rem; }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
 
         .section-card {
             background: var(--surface);
@@ -151,34 +225,45 @@
             display: flex;
             gap: 1rem;
             align-items: flex-start;
-            transition: box-shadow 0.15s, border-color 0.15s;
+            transition: box-shadow 0.15s, border-color 0.15s, transform 0.15s;
             text-decoration: none;
             color: inherit;
         }
+
         .section-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 4px 20px rgba(29, 95, 180, 0.08);
+            border-color: var(--yellow);
+            box-shadow: 0 4px 20px rgba(242, 194, 48, 0.18);
+            transform: translateY(-2px);
         }
+
         .icon-box {
-            width: 40px; height: 40px;
+            width: 40px;
+            height: 40px;
             border-radius: 8px;
-            background: var(--accent-light);
-            display: flex; align-items: center; justify-content: center;
+            background: var(--yellow);
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.1rem;
             flex-shrink: 0;
             margin-top: 2px;
+            font-weight: bold;
         }
+
         .section-text h2 {
             font-size: 1rem;
             font-weight: 600;
-            color: var(--dark);
+            color: var(--text-dark);
             margin-bottom: 0.3rem;
         }
+
         .section-text p {
             font-size: 0.875rem;
-            color: var(--mid);
+            color: var(--text-mid);
             line-height: 1.55;
         }
+
         .arrow {
             margin-left: auto;
             color: var(--muted);
@@ -186,9 +271,11 @@
             align-self: center;
             flex-shrink: 0;
         }
-        .section-card:hover .arrow { color: var(--accent); }
 
-        /* ── FOOTER ── */
+        .section-card:hover .arrow {
+            color: var(--dark-blue);
+        }
+
         footer {
             text-align: center;
             padding: 2rem 1rem;
@@ -199,19 +286,29 @@
         }
 
         @media (max-width: 650px) {
-            .page { grid-template-columns: 1fr; }
-            .sidebar { position: static; }
+            .page {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .header {
+                font-size: 30px;
+                padding: 28px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- TEAM NAVBAR - matches all teammates' files -->
     <div class="header">
         CS Website Tour
     </div>
+
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="Student_Resources.html">Student Resources</a>
         <a href="Facilities.html">Facilities</a>
         <a href="Tutorials.html">Tutorials</a>
@@ -227,8 +324,6 @@
     </div>
 
     <div class="page">
-
-        <!-- SIDEBAR: Team -->
         <aside class="sidebar">
             <div class="card">
                 <div class="card-header">
@@ -237,6 +332,7 @@
                     <div class="dot"></div>
                     <span>Team 7</span>
                 </div>
+
                 <div class="team-label">Members</div>
 
                 <div class="member">
@@ -272,9 +368,7 @@
             </div>
         </aside>
 
-        <!-- MAIN: Sections -->
         <main class="main-content">
-
             <a class="section-card" href="Student_Resources.html">
                 <div class="icon-box">📚</div>
                 <div class="section-text">
@@ -333,11 +427,10 @@
                 <div class="icon-box">🏫</div>
                 <div class="section-text">
                     <h2>Facilities and Locations</h2>
-                    <p>Information regarding facilities within the CS Department..</p>
+                    <p>Information regarding facilities within the CS Department.</p>
                 </div>
                 <span class="arrow">→</span>
             </a>
-
         </main>
     </div>
 
