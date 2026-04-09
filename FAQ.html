@@ -20,13 +20,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #1D5FB4; /* Question background */
-        color: #fff; /* Text color for visibility */
+        background-color: #1D5FB4;
+        color: #fff;
         transition: background-color 0.3s ease;
       }
 
       .faq-question:hover {
-        background-color: #154d8c; /* Slightly darker on hover */
+        background-color: #154d8c;
       }
 
       .faq-answer {
@@ -34,7 +34,7 @@
         display: none;
         font-weight: normal;
         color: #333;
-        background-color: #fff; /* Answer white background */
+        background-color: #fff;
       }
 
       .arrow {
@@ -92,14 +92,14 @@ Alumni homes must use less than 50 Mb of disk.<br>
 The lab directors may refine their policy on quota values (up or down), at any time.<br><br>
 
 Mailboxes<br>
----------<br>
+--------------<br>
 Students must use their UMB emails.  No inbound emails coming from outside<br>
 the cs.umb.edu and umb.edu domains are accepted for students.  Inbound emails<br> 
 comning from the cs.umb.edu and umb.edu domains to CS/IT students are forwarded<br>
 to their UMB email address.<br><br>   
 
 Reducing Disk Space Usage<br>
--------------------------<br>
+---------------------------------------<br>
 It is a big win to compress text files with `gzip`.<br><br>
 
 See `man gzip`.<br><br>
@@ -107,7 +107,7 @@ See `man gzip`.<br><br>
 Consider copying files out to your PC or USB drive.<br><br>
 
 Over Quota<br>
-----------<br>
+----------------<br>
 At login time, before the prompt is displayed, you may see a message from the<br>
 quota command about being over and having to reduce your usage by so much.<br><br>
 
@@ -120,7 +120,7 @@ This can help you examine archives or compressed files that you cannot uncompres
 Thank you for your cooperation towards fairness and better service for all.<br><br>
 
 Nobackup Area<br>
--------------<br>
+---------------------<br>
 The nobackup area is a terabyte partition available for temporary storage.<br> 
 As its name says, it does not get backed up.<br><br>
 
@@ -147,7 +147,7 @@ chmod 700 %username%</div>
                 Where is the server located physically?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">The server is physically on campus, in the isc.</div>
+              <div class="faq-answer">The server is physically on campus, in the ISC Building.</div>
             </div>
 
             <div class="faq-item">
@@ -155,7 +155,7 @@ chmod 700 %username%</div>
                 How reliable is the server’s uptime?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">The server uptime is pretty reliable although we had a memory error in January which resulted in a reboot.  Other than that we usually reboot it once or twice a year, in between semesters.</div>
+              <div class="faq-answer">The server uptime is pretty reliable although we had a memory error in January which resulted in a reboot. Other than that we usually reboot it once or twice a year, in between semesters.</div>
             </div>
 
             <div class="faq-item">
@@ -163,7 +163,7 @@ chmod 700 %username%</div>
                 What username and password do I use for the server?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">Use the username and password from the account you created on portal.cs.umb.edu</div>
+              <div class="faq-answer">Use the username and password from the account you created on portal.cs.umb.edu.</div>
             </div>
 
             <div class="faq-item">
@@ -172,20 +172,20 @@ chmod 700 %username%</div>
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-Yes, you can access the server remotely over ssh:
+Yes, you can access the server remotely over ssh:<br>
 
-Use Secure Shell (ssh) to connect to `users.cs.umb.edu`.
+Use Secure Shell (ssh) to connect to `users.cs.umb.edu`.<br><br>
 
-For Windows users:
+For Windows users:<br>
+--------------------------<br>
+We recommend the following free ssh client console/file transfer packages:<br>
 
-We recommend the following free ssh client console/file transfer packages:
+[PuTTY] (https://www.puttyssh.org).<br>
 
-[PuTTY] (https://www.puttyssh.org).
+[Bitvise] (https://www.bitvise.com/ssh-client-download).<br><br>
 
-[Bitvise] (https://www.bitvise.com/ssh-client-download).
-
-For Mac users:
-
+For Mac users:<br>
+--------------------<br>
 We recommend the Terminal application that comes with the Mac.</div>
             </div>
 
@@ -194,7 +194,7 @@ We recommend the Terminal application that comes with the Mac.</div>
                 What should I do if I forget my login credentials?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">portal.c.sumb.edu has a password reset feature.</div>
+              <div class="faq-answer">portal.cs.umb.edu has a password reset feature.</div>
             </div>
 
             <div class="faq-item">
@@ -202,7 +202,7 @@ We recommend the Terminal application that comes with the Mac.</div>
                 Can I share files with other students on the server?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">Yes, you can share files with other students on the server, just set the proper ownership and permissions. chown, chgrp and chmod</div>
+              <div class="faq-answer">Yes, you can share files with other students on the server, just set the proper ownership and permissions. Use the following commands: chown, chgrp and chmod.</div>
             </div>
 
             <div class="faq-item">
@@ -210,7 +210,9 @@ We recommend the Terminal application that comes with the Mac.</div>
                 How do I back up my work on the server?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">You can backup your files on the server by copying them somewhere else.  We backup the server every night, email operator@cs.umb.edu for a restore.</div>
+              <div class="faq-answer">You can backup your files on the server by copying them somewhere else.<br><br> 
+
+              We backup the server every night, email operator@cs.umb.edu for a restore.</div>
             </div>
 
             <div class="faq-item">
@@ -218,7 +220,7 @@ We recommend the Terminal application that comes with the Mac.</div>
                 Are there any IP restrictions or VPN requirements?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">There are no ip restrictions or vpn requirements, we do fun fail2ban, if youtype in your password wrong too many times within 10 minutes your ip gets blocked for 10 minutes, after that the ban doubles</div>
+              <div class="faq-answer">There are no IP restrictions or VPN requirements, we do fun fail2ban, if youtype in your password wrong too many times within 10 minutes your IP address gets blocked for 10 minutes, after that the ban doubles.</div>
             </div>
 
             <div class="faq-item">
@@ -226,7 +228,7 @@ We recommend the Terminal application that comes with the Mac.</div>
                 How do I report suspicious activity or a security issue?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">email operator@cs.umb.edu for help</div>
+              <div class="faq-answer">Email operator@cs.umb.edu for help.</div>
             </div>
 
             <div class="faq-item">
@@ -234,7 +236,7 @@ We recommend the Terminal application that comes with the Mac.</div>
                 Who do I contact if I encounter technical problems?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">email operator@cs.umb.edu for technical problem resolution</div>
+              <div class="faq-answer">Email operator@cs.umb.edu for technical problem resolution.</div>
             </div>
 
             <div class="faq-item">
@@ -242,7 +244,7 @@ We recommend the Terminal application that comes with the Mac.</div>
                 How do I request additional resources or permissions?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">email operator@cs.umb.edu for resource requests</div>
+              <div class="faq-answer">Email operator@cs.umb.edu for resource requests.</div>
             </div>
 
             <div class="faq-item">
@@ -259,29 +261,31 @@ We recommend the Terminal application that comes with the Mac.</div>
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-Starting in March 2021, the Computer Science department imposed a new password policy.  Your password must have:
+Starting in March 2021, the Computer Science department imposed a new password policy.<br><br>  
 
-        1) Between 10 And 128 Characters.
-        2) At Least Two Uppercase Letters.
-        3) At Least Two Lowercase Letters.
-        4) At Least Two Numerical Digits.
-        5) At Least Two Special Symbols (!$%#^@&*_+ etc.)
+Your password must have:<br>
+
+        1) Between 10 And 128 Characters<br>
+        2) At Least Two Uppercase Letters<br>
+        3) At Least Two Lowercase Letters<br>
+        4) At Least Two Numerical Digits<br>
+        5) At Least Two Special Symbols (!$%#^@&*_+ etc.)<br><br>
  
 One way to choose an OK password is to pick a phrase or song and use the first
-letters of the words, with some non-letter characters.
-Do not confuse "dictionary" with say the Webster's dictionary.
+letters of the words, with some non-letter characters.<br>
+Do not confuse "dictionary" with say the Webster's dictionary.<br><br>
 
 Cracking software comes with huge lists of words in many languages, real and 
 imaginary, and English transliterations of languages in other alphabets: 
 Russian, Mandarin, Swahili, Vietnamese, Arabic, Farsi, Hindi; all the words 
 in the Koran; the CIA World Factbook's list of every place name in the world; 
 car names, people names, botanical names, science fiction names, Klingon words;
-and just about anything you could think of.
+and just about anything you could think of.<br>
 If it has been written down anywhere in the world, it's probably in a cracking 
-dictionary.
+dictionary.<br><br>
 
-**Any** password derived from **any** dictionary word 
-(or personal information), modified in **any** way, constitutes 
+<b>Any</b> password derived from <b>any</b> dictionary word 
+(or personal information), modified in <b>any</b> way, constitutes 
 a potentially guessable password.</div>
             </div>
 
@@ -292,12 +296,12 @@ a potentially guessable password.</div>
               </div>
               <div class="faq-answer">
 We support homepages accessed through `https://www.cs.umb.edu/~username`, where 
-username is your Linux/Windows login name.
+username is your Linux/Windows login name.<br><br>
 
 Your homepage must be named `index.html` and be in a publicly readable 
-directory named `public_html` under your home directory. 
+directory named `public_html` under your home directory.<br><br>
 
-Everything on your webpage is visible to **everyone** on the Internet.
+Everything on your webpage is visible to <b>everyone</b> on the Internet.
 Do not put any Personally Identifiable Information (PII) there. Your email 
 address should be in the format of `Firstname.Lastname@umb.edu`.</div>
             </div>
@@ -309,12 +313,15 @@ address should be in the format of `Firstname.Lastname@umb.edu`.</div>
               </div>
               <div class="faq-answer">
 Windows accounts and Linux accounts use the same kerberos system for 
-authentication.  Your Linux and Windows username and password are the same. 
+authentication.  Your Linux and Windows username and password are the same.<br><br> 
+
+
 You only have one password.  If you change your password on a Linux Desktop
 or a Linux server, users.cs.umb.edu for example, your Windows password will 
 change too.  If you change your password from a Windows PC in any of the 
-CS Labs, your Linux password will change too.  You will also be able to 
-change your password yourself from the CS Portal at 
+CS Labs, your Linux password will change too.<br><br>  
+
+You will also be able to change your password yourself from the CS Portal at 
 the URL: "https://portal.cs.umb.edu".</div>
             </div>
 
@@ -325,30 +332,29 @@ the URL: "https://portal.cs.umb.edu".</div>
               </div>
               <div class="faq-answer">
 User course accounts are created through the CS department Portal.  The URL is
-"https://portal.cs.umb.edu".
+"https://portal.cs.umb.edu".<br><br>
 
-The CS department Portal provides the following services to the user commnunity:
+The CS department Portal provides the following services to the user community:<br>
 
-        o Create new/modify user's Portal account.
-        o Create new Linux/Windows user account.
-        o Register for courses accounts - CS/IT students must do this
-          for each new semester.
-        o Reset Linux/Windows user password.
-        o Reset user's Portal password.
+        o Create new/modify user's Portal account.<br>
+        o Create new Linux/Windows user account.<br>
+        o Register for courses accounts - CS/IT students must do this for each new semester.<br>
+        o Reset Linux/Windows user password.<br>
+        o Reset user's Portal password.<br><br>
 
-Note - If a user changes their password from users.cs.umb.edu, their 
-       Linux/Windows password will be set to that new password.  
-       Their Portal password will not change.
+Note - If a user changes their password from users.cs.umb.edu, their:<br> 
+       Linux/Windows password will be set to that new password.<br>
+       Their Portal password will not change.<br><br>
 
-       If a user changes their password from the Portal, their 
-       Linux/Windows and Portal password will be set to that new password.
+       If a user changes their password from the Portal, their:<br> 
+       Linux/Windows and Portal password will be set to that new password.<br><br>
 
-Never share your password with **anyone**.  We mean it.
-We have a strict one-account, one-user policy.
+Never share your password with **anyone**.  We mean it.<br>
+We have a strict one-account, one-user policy.<br>
 We can help you communicate with other systems and share group files without 
-sharing passwords.
+sharing passwords.<br><br>
 
-If you share your password you might lose your Linux/Windows account.
+If you share your password you might lose your Linux/Windows account.<br><br>
 
 Send email to "operator@cs.umb.edu" if you have any additional 
 questions.</div>
@@ -360,25 +366,24 @@ questions.</div>
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-From users.cs.umb.edu a.k.a pe15.cs.umb.edu, you can use the following 2 commands to find the UMB email address of your peers at the command prompt.
+From users.cs.umb.edu a.k.a pe15.cs.umb.edu, you can use the following 2 commands to find the UMB email address of your peers at the command prompt.<br><br>
 
-The first command is the preferred method, and it is:
+The first command is the preferred method, and it is:<br><br>
 
-$ u2c.sh   where “” is the Linux login name.  The output will be of 2 forms:
+$ u2c.sh   where “” is the Linux login name.  The output will be of 2 forms:<br><br>
 
-Firstname.LastnameXYZ@umb.edu, where XYZ are digits.
+1. Firstname.LastnameXYZ@umb.edu, where XYZ are digits.<br>
+2. Firstname.Lastname@umb.edu.<br><br>
 
-Firstname.Lastname@umb.edu.
+The second command is:<br><br>
 
-The second command is:
+$ unix2campus <br><br>
 
-$ unix2campus 
+Both commands show the same output.<br><br><br>
 
-Both commands show the same output.
+You can use the mail client 'alpine' to send email on a CS Ubuntu host.<br><br>
 
-You can use the mail client 'alpine' to send email on a CS Ubuntu host.
-
-$ alpine Firstname.LastnameXYZ@umb.edu or 
+$ alpine Firstname.LastnameXYZ@umb.edu or<br> 
 $ alpine Firstname.Lastname@umb.edu</div>
             </div>
 
@@ -388,27 +393,25 @@ $ alpine Firstname.Lastname@umb.edu</div>
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-We do tape backups daily, in the dark of night.
-To request a file restore, send email to `operator[at]cs[dot]umb[dot]edu` with 
-the following information.
+We do tape backups daily, in the dark of night.<br>
+To request a file restore, send email to `operator@cs.umb.edu` with 
+the following information.<br><br>
 
-For current work, including course directories:
+For current work, including course directories:<br>
 
-1. The name of the file.
-2. What directory the file was in.
-3. When you last edited the file, or saw it in good condition; yesterday, last 
-   month, etc.
-4. A file created during the day and deleted shortly thereafter is **gone**.
-    It cannot be restored.
+1. The name of the file.<br>
+2. What directory the file was in.<br>
+3. When you last edited the file, or saw it in good condition; yesterday, last month, etc.<br>
+4. A file created during the day and deleted shortly thereafter is <b>gone</b>. It cannot be restored.<br><br>
 
 An operator will restore the file(s) into the directory `RESTORE` under your 
-home, usually by the next business day.
-Please recover from there what you need, and delete what you don't. 
+home, usually by the next business day.<br>
+Please recover from there what you need, and delete what you don't.<br><br>
 
 A grace period of a week is usually granted before the RESTORE directory gets 
-deleted under your home (unless you have already done so).
+deleted under your home (unless you have already done so).<br><br>
 
-We recommend you do your backup ( sftp, scp to your own storage devices).</div>
+We recommend you do your backup (sftp, scp to your own storage devices).</div>
             </div>
 
             <div class="faq-item">
@@ -417,13 +420,13 @@ We recommend you do your backup ( sftp, scp to your own storage devices).</div>
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-Yes, you can use the WiFi network that is available in all 3 CS Labs.  Please 
+Yes, you can use the WiFi network that is available in all 3 CS Labs. Please 
 do not unplugged the network cables from the PCs to plug in your laptops.  
-Use the WiFi network!
+Use the WiFi network!<br><br>
 
-There are a few empty power outlets in the room.  Look for them! Do not
+There are a few empty power outlets in the room. Look for them! Do not
 unplugged the power cables from the PCs or monitors to charge your laptops, 
-mobile devices, etc.  There are also some power outlets in the hallway outside
+mobile devices, etc. There are also some power outlets in the hallway outside
 the CS Labs that you can use to charge your devices.</div>
             </div>
 
@@ -433,10 +436,10 @@ the CS Labs that you can use to charge your devices.</div>
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-Yes, there is WiFi access through out the Campus.
-To connect, you will need you UMB email and password.
-For more information go to:
-https://www.umb.edu/it/wifi</div>
+Yes, there is WiFi access through out the Campus.<br>
+To connect, you will need you UMB email and password.<br><br>
+
+For more information go to: https://www.umb.edu/it/wifi</div>
             </div>
 
             <div class="faq-item">
@@ -447,14 +450,13 @@ https://www.umb.edu/it/wifi</div>
               <div class="faq-answer">
 Log onto webmail.umb.edu using your credentials. Under settings 
 (the wheel symbol), search for the keyword "forwarding". This will bring you 
-to the forwarding screen to set the forwarding address.
+to the forwarding screen to set the forwarding address.<br><br>
 
-At the top of the page, do:
-1. Select Settings (wheel) -> View all Outlook settings.
-2. Select Mail -> Forwarding.
-3. Select Enable forwarding, enter the forwarding email address.
-4. Select Save.
-
+At the top of the page, do:<br>
+1. Select Settings (wheel) -> View all Outlook settings.<br>
+2. Select Mail -> Forwarding.<br>
+3. Select Enable forwarding, enter the forwarding email address.<br>
+4. Select Save.<br><br>
 
 
 Notes: If you want a copy of the original message to remain in your mailbox, select Keep a copy of forwarded messages.
@@ -469,20 +471,18 @@ Notes: If you want a copy of the original message to remain in your mailbox, sel
               <div class="faq-answer">
 Use `sftp`, the secure version of the File Transfer Protocol that comes with 
 the Windows and the Mac OSes.  A PC client program, `psftp`, comes along with 
-PuTTY.
+PuTTY.<br><br>
 
-If you prefer an application with a graphical user interface (GUI).
+If you prefer an application with a graphical user interface (GUI).<br><br>
 
-For Windows and Mac users:
+For Windows and Mac users:<br>
+---------------------------------------<br>
+[Filezilla] (https://sourceforge.net/projects/filezilla/).<br>
+[Cyberduck] (https://cyberduck.io/download/).<br><br>
 
-[Filezilla] (https://sourceforge.net/projects/filezilla/).
-
-[Cyberduck] (https://cyberduck.io/download/).
-
-For Windows users:
-
-[WinSCP] (https://sourceforge.net/projects/winscp/).
-
+For Windows users:<br>
+---------------------------<br>
+[WinSCP] (https://sourceforge.net/projects/winscp/).<br>
 [Bitvise] (https://www.bitvise.com/ssh-client-download).</div>
             </div>
 
@@ -492,37 +492,38 @@ For Windows users:
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-You can check your disk usage with the `du` command.
-See `man du`.
+You can check your disk usage with the `du` command.<br>
+See `man du`.<br><br>
+
 The main thing to know is that the `-s` flag gives a sum for a subtree without 
-showing every subdir in it.
+showing every subdir in it.<br><br>
 
-du -sh ~
-K/M/G   /home/$USER
+du -sh ~<br>
+K/M/G   /home/$USER<br><br>
 
-du -h --max-depth=1 ~
+du -h --max-depth=1 ~<br><br>
 
-To see the size of files in the current directory use the following command: 
+To see the size of files in the current directory use the following command:<br><br>
 
-ls -sh
+ls -sh<br><br>
 
-This will not show the size of an entire directory, use the du command for that.
+This will not show the size of an entire directory, use the du command for that.<br><br>
 
 To remove any directories that too are big and are just taking up space like the 
-`.mozilla` and `.cache` you can use the following command:
+`.mozilla` and `.cache` you can use the following command:<br><br>
 
-rm -rf 
+rm -rf <br><br>
 
 You can also remap your .cache directory to go into a nobackup space which 
-does not affect your disk quota.
+does not affect your disk quota.<br><br>
 
-Copy and paste the commands shown below into a terminal session to do that:
+Copy and paste the commands shown below into a terminal session to do that:<br><br>
 
-cd ~
-rm -rf .cache
-mkdir -p /nobackup/students/$USER/.cache
-ln -s !$ .cache
-chmod 700 /nobackup/students/$USER
+cd ~<br>
+rm -rf .cache<br>
+mkdir -p /nobackup/students/$USER/.cache<br>
+ln -s !$ .cache<br>
+chmod 700 /nobackup/students/$USER<br><br>
 
 **This will delete the entire directory and its content, please verify that 
 there is nothing important before executing.**</div>
