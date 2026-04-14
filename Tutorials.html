@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Screenshots & Videos - CS Website Tour</title>
+    <title>Tutorials - CS Website Tour</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <div class="header">
-    Screenshots & Videos
+    Tutorials
 </div>
 <div class="navbar">
     <a href="index.html">Home</a>
@@ -34,6 +34,51 @@
     <h3>Step 3: Server Terminal</h3>
     <p>You are now connected and ready to use the CS server:</p>
     <img src="Media/Untitled.png" alt="Server terminal session" style="max-width: 100%; height: auto; border: 1px solid #444; border-radius: 5px; margin: 10px 0;">
+
+    <hr style="margin: 30px 0; border: 1px solid #ccc;">
+
+    <h2>Basic Server Commands</h2>
+    <p>Once you are logged into the CS server, here are some essential commands to get started:</p>
+
+    <h3>pwd - Print Working Directory</h3>
+    <p>Shows your current location in the file system:</p>
+    <pre style="background-color: #1a1a2e; color: #00ff00; padding: 15px; border-radius: 5px; font-size: 14px; overflow-x: auto;">
+krishna@pe15:~$ pwd
+/home/krishna</pre>
+
+    <h3>ls - List Files and Directories</h3>
+    <p>Displays the files and folders in your current directory:</p>
+    <pre style="background-color: #1a1a2e; color: #00ff00; padding: 15px; border-radius: 5px; font-size: 14px; overflow-x: auto;">
+krishna@pe15:~$ ls
+cs110  cs210  cs310  cs410  public_html</pre>
+
+    <h3>whoami - Display Current User</h3>
+    <p>Shows the username you are logged in as:</p>
+    <pre style="background-color: #1a1a2e; color: #00ff00; padding: 15px; border-radius: 5px; font-size: 14px; overflow-x: auto;">
+krishna@pe15:~$ whoami
+krishna</pre>
+
+    <h3>cd - Change Directory</h3>
+    <p>Navigate to a different folder:</p>
+    <pre style="background-color: #1a1a2e; color: #00ff00; padding: 15px; border-radius: 5px; font-size: 14px; overflow-x: auto;">
+krishna@pe15:~$ cd cs410
+krishna@pe15:~/cs410$</pre>
+
+    <h3>cat - View File Contents</h3>
+    <p>Display the contents of a text file:</p>
+    <pre style="background-color: #1a1a2e; color: #00ff00; padding: 15px; border-radius: 5px; font-size: 14px; overflow-x: auto;">
+krishna@pe15:~/cs410$ cat R18.txt
+Krishna Kanodia
+R18
+...</pre>
+
+    <h3>mkdir - Create a New Directory</h3>
+    <p>Create a new folder in your current location:</p>
+    <pre style="background-color: #1a1a2e; color: #00ff00; padding: 15px; border-radius: 5px; font-size: 14px; overflow-x: auto;">
+krishna@pe15:~$ mkdir myproject
+krishna@pe15:~$ ls
+cs110  cs210  cs310  cs410  myproject  public_html</pre>
+
 </div>
 </body>
 </html>
