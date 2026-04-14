@@ -1,12 +1,33 @@
-body {
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6fa;
-    color: #111;
+    padding: 0;
+}
+
+:root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --dark-blue: #003366;
+    --nav-blue: #00509e;
+    --yellow: #f2c230;
+    --yellow-dark: #ddb11f;
+    --text-dark: #1a1a1a;
+    --text-mid: #4a4a4a;
+    --muted: #888;
+    --border: #ddd;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text-dark);
+    min-height: 100vh;
 }
 
 .header {
-    background-color: #003b73;
+    background-color: var(--dark-blue);
     color: white;
     padding: 40px;
     font-size: 40px;
@@ -18,21 +39,28 @@ body {
     display: flex;
     justify-content: center;
     gap: 25px;
-    background-color: #0056a3;
+    background-color: var(--nav-blue);
     padding: 12px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.2s ease;
 }
 
 .navbar a:hover {
-    background-color: #f2c230;
-    color: #003b73;
+    background-color: var(--yellow);
+    color: var(--dark-blue);
+}
+
+.navbar a.active {
+    background-color: var(--yellow);
+    color: var(--dark-blue);
 }
 
 .middle {
