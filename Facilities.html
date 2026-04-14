@@ -30,6 +30,14 @@
             color: var(--text-dark);
             min-height: 100vh;
         }
+        
+        li {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-top: 1rem;
+    list-style-type: none; /* removes bullets */
+}
 
         /* HEADER & NAVBAR — matches index.html exactly */
         .header {
@@ -145,86 +153,7 @@
             color: var(--dark-blue);
         }
 
-        /* TIMELINE */
-        .timeline { position: relative; padding-left: 2rem; }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0.55rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--border);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 1.75rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -1.56rem;
-            top: 0.85rem;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--nav-blue);
-            border: 2px solid var(--surface);
-            box-shadow: 0 0 0 2px var(--nav-blue);
-        }
-
-        .timeline-item.highlight::before {
-            background: var(--yellow-dark);
-            box-shadow: 0 0 0 2px var(--yellow-dark);
-        }
-
-        .timeline-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.1rem 1.3rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
-            transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
-        }
-
-        .timeline-card:hover {
-            box-shadow: 0 4px 20px rgba(242, 194, 48, 0.18);
-            border-color: var(--yellow);
-            transform: translateY(-2px);
-        }
-
-        .timeline-item.highlight .timeline-card {
-            border-left: 3px solid var(--yellow);
-        }
-
-        .timeline-year {
-            font-family: var(--mono);
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--nav-blue);
-            letter-spacing: 0.1em;
-            margin-bottom: 0.3rem;
-        }
-
-        .timeline-item.highlight .timeline-year {
-            color: var(--yellow-dark);
-        }
-
-        .timeline-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.4rem;
-        }
-
-        .timeline-desc {
-            font-size: 0.875rem;
-            color: var(--text-mid);
-            line-height: 1.6;
-        }
+        
 
         /* TAG */
         .tag {
