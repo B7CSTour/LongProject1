@@ -5,62 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CS Student Resources | UMass Boston</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+    }
+
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --dark-blue: #003366;
+      --nav-blue: #00509e;
+      --yellow: #f2c230;
+      --text-dark: #1a1a1a;
+      --text-mid: #4a4a4a;
+      --border: #ddd;
+      --sans: 'IBM Plex Sans', sans-serif;
     }
 
     body {
-      background-color: #f4f7fb;
-      color: #222;
+      font-family: var(--sans);
+      background-color: var(--bg);
+      color: var(--text-dark);
       line-height: 1.6;
     }
 
     header {
-      background-color: #003366;
+      background-color: var(--dark-blue);
       color: white;
-      padding: 30px 20px;
+      padding: 40px;
+      font-size: 40px;
+      font-weight: bold;
       text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1rem;
-      max-width: 800px;
-      margin: 0 auto;
     }
 
     .navbar {
-      background-color: #00509e;
-      padding: 12px 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      background-color: var(--nav-blue);
+      padding: 12px;
+      flex-wrap: wrap;
     }
 
     .navbar a {
       color: white;
       text-decoration: none;
-      margin: 0 18px;
-      font-weight: bold;
-      font-size: 0.95rem;
-      padding: 6px 12px;
-      border-radius: 4px;
+      font-size: 18px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.2s ease;
     }
 
     .navbar a:hover {
-      background-color: #f2c230;
-      color: #003b73;
+      background-color: var(--yellow);
+      color: var(--dark-blue);
     }
 
     .navbar a.active {
-      background-color: #f2c230;
-      color: #003b73;
+      background-color: var(--yellow);
+      color: var(--dark-blue);
     }
 
     .container {
@@ -153,11 +159,7 @@
 <body>
 
   <header>
-    <h1>Computer Science Student Resources</h1>
-    <p>
-      Explore internships, career opportunities, student clubs, and research experiences
-      available to Computer Science students at UMass Boston.
-    </p>
+    Computer Science Student Resources
   </header>
 
   <div class="navbar">
