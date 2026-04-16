@@ -67,6 +67,7 @@
 <div class="middle">
 
     <div class="section">
+
         <div class="section-content">
             
 
@@ -135,107 +136,45 @@ chmod 700 %username%</div>
 
             <div class="faq-item">
               <div class="faq-question">
-                Who can access the server?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">Computer Science and IT students have user accounts on users.</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                Where is the server located physically?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">The server is physically on campus, in the ISC Building.</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                How reliable is the server’s uptime?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">The server uptime is pretty reliable, although we had a memory error in January, which resulted in a reboot. Other than that, we usually reboot it once or twice a year, in between semesters.</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                What username and password do I use for the server?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">Use the username and password from the account you created on portal.cs.umb.edu.</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                Can I access the server remotely?
+                How do I check my disk usage on a Linux machine?
                 <span class="arrow">&#9654;</span>
               </div>
               <div class="faq-answer">
-Yes, you can access the server remotely over SSH:<br>
+You can check your disk usage with the `du` command.<br>
+See `man du`.<br><br>
 
-Use Secure Shell (ssh) to connect to `users.cs.umb.edu`.<br><br>
+The main thing to know is that the `-s` flag gives a sum for a subtree without 
+showing every subdir in it.<br><br>
 
-For Windows users:<br>
---------------------------<br>
-We recommend the following free SSH client console/file transfer packages:<br>
+du -sh ~<br>
+K/M/G   /home/$USER<br><br>
 
-[PuTTY] (https://www.puttyssh.org).<br>
+du -h --max-depth=1 ~<br><br>
 
-[Bitvise] (https://www.bitvise.com/ssh-client-download).<br><br>
+To see the size of files in the current directory, use the following command:<br><br>
 
-For Mac users:<br>
---------------------<br>
-We recommend the Terminal application that comes with the Mac.</div>
-            </div>
+ls -sh<br><br>
 
-            <div class="faq-item">
-              <div class="faq-question">
-                What should I do if I forget my login credentials?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">portal.cs.umb.edu has a password reset feature.</div>
-            </div>
+This will not show the size of an entire directory; use the du command for that.<br><br>
 
-            <div class="faq-item">
-              <div class="faq-question">
-                Can I share files with other students on the server?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">Yes, you can share files with other students on the server, just set the proper ownership and permissions. Use the following commands: chown, chgrp, and chmod.</div>
-            </div>
+To remove any directories that are too big and are just taking up space, like the 
+`.mozilla` and `.cache`, you can use the following command:<br><br>
 
-            <div class="faq-item">
-              <div class="faq-question">
-                How do I back up my work on the server?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">You can backup your files on the server by copying them somewhere else.<br><br> 
+rm -rf <br><br>
 
-              We backup the server every night, email operator@cs.umb.edu for a restore.</div>
-            </div>
+You can also remap your .cache directory to go into a nobackup space, which 
+does not affect your disk quota.<br><br>
 
-            <div class="faq-item">
-              <div class="faq-question">
-                Are there any IP restrictions or VPN requirements?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">There are no IP restrictions or VPN requirements, we do fun fail2ban, if youtype in your password wrong too many times within 10 minutes, your IP address gets blocked for 10 minutes, after that, the ban doubles.</div>
-            </div>
+Copy and paste the commands shown below into a terminal session to do that:<br><br>
 
-            <div class="faq-item">
-              <div class="faq-question">
-                How do I report suspicious activity or a security issue?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">Email operator@cs.umb.edu for help.</div>
-            </div>
+cd ~<br>
+rm -rf .cache<br>
+mkdir -p /nobackup/students/$USER/.cache<br>
+ln -s !$ .cache<br>
+chmod 700 /nobackup/students/$USER<br><br>
 
-            <div class="faq-item">
-              <div class="faq-question">
-                Who do I contact if I encounter technical problems?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">Email operator@cs.umb.edu for technical problem resolution.</div>
+**This will delete the entire directory and its content. Please verify that 
+there is nothing important before executing.**</div>
             </div>
 
             <div class="faq-item">
@@ -248,10 +187,18 @@ We recommend the Terminal application that comes with the Mac.</div>
 
             <div class="faq-item">
               <div class="faq-question">
-                What operating system does the server run?
+                Who can access the server?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">Users runs Ubuntu 24.04; most of our systems are Ubuntu. The CS lab Computers are Ubuntu 24.04 as well.</div>
+              <div class="faq-answer">Computer Science and IT students have user accounts on users.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                What username and password do I use for the server?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">Use the username and password from the account you created on portal.cs.umb.edu.</div>
             </div>
 
             <div class="faq-item">
@@ -290,6 +237,82 @@ a potentially guessable password.</div>
 
             <div class="faq-item">
               <div class="faq-question">
+                What should I do if I forget my login credentials?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">portal.cs.umb.edu has a password reset feature.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How do I transfer files to/from my PC?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">
+Use `sftp`, the secure version of the File Transfer Protocol that comes with 
+Windows and Mac OSes.  A PC client program, `psftp`, comes along with 
+PuTTY.<br><br>
+
+If you prefer an application with a graphical user interface (GUI).<br><br>
+
+For Windows and Mac users:<br>
+---------------------------------------<br>
+[Filezilla] (https://sourceforge.net/projects/filezilla/).<br>
+[Cyberduck] (https://cyberduck.io/download/).<br><br>
+
+For Windows users:<br>
+---------------------------<br>
+[WinSCP] (https://sourceforge.net/projects/winscp/).<br>
+[Bitvise] (https://www.bitvise.com/ssh-client-download).</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Can I share files with other students on the server?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">Yes, you can share files with other students on the server, just set the proper ownership and permissions. Use the following commands: chown, chgrp, and chmod.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How do I back up my work on the server?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">You can backup your files on the server by copying them somewhere else.<br><br> 
+
+              We backup the server every night, email operator@cs.umb.edu for a restore.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How do I get a file restored from backup?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">
+We do tape backups daily, in the dark of night.<br>
+To request a file restore, send an email to `operator@cs.umb.edu` with 
+the following information.<br><br>
+
+For current work, including course directories:<br>
+
+1. The name of the file.<br>
+2. What directory the file was in.<br>
+3. When you last edited the file, or saw it in good condition; yesterday, last month, etc.<br>
+4. A file created during the day and deleted shortly thereafter is <b>gone</b>. It cannot be restored.<br><br>
+
+An operator will restore the file(s) into the directory `RESTORE` under your 
+home, usually by the next business day.<br>
+Please recover from there what you need, and delete what you don't.<br><br>
+
+A grace period of a week is usually granted before the RESTORE directory gets 
+deleted under your home (unless you have already done so).<br><br>
+
+We recommend you do your backup (sftp, scp to your own storage devices).</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
                 How do I create my homepage?
                 <span class="arrow">&#9654;</span>
               </div>
@@ -303,6 +326,53 @@ directory named `public_html` under your home directory.<br><br>
 Everything on your webpage is visible to <b>everyone</b> on the Internet.
 Do not put any Personally Identifiable Information (PII) there. Your email 
 address should be in the format of `Firstname.Lastname@umb.edu`.</div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                Can I access the server remotely?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">
+Yes, you can access the server remotely over SSH:<br>
+
+Use Secure Shell (ssh) to connect to `users.cs.umb.edu`.<br><br>
+
+For Windows users:<br>
+--------------------------<br>
+We recommend the following free SSH client console/file transfer packages:<br>
+
+[PuTTY] (https://www.puttyssh.org).<br>
+
+[Bitvise] (https://www.bitvise.com/ssh-client-download).<br><br>
+
+For Mac users:<br>
+--------------------<br>
+We recommend the Terminal application that comes with the Mac.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Are there any IP restrictions or VPN requirements?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">There are no IP restrictions or VPN requirements, we do fun fail2ban, if youtype in your password wrong too many times within 10 minutes, your IP address gets blocked for 10 minutes, after that, the ban doubles.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                How do I report suspicious activity or a security issue?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">Email operator@cs.umb.edu for help.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Who do I contact if I encounter technical problems?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">Email operator@cs.umb.edu for technical problem resolution.</div>
             </div>
 
             <div class="faq-item">
@@ -388,33 +458,6 @@ $ alpine Firstname.Lastname@umb.edu</div>
 
             <div class="faq-item">
               <div class="faq-question">
-                How do I get a file restored from backup?
-                <span class="arrow">&#9654;</span>
-              </div>
-              <div class="faq-answer">
-We do tape backups daily, in the dark of night.<br>
-To request a file restore, send an email to `operator@cs.umb.edu` with 
-the following information.<br><br>
-
-For current work, including course directories:<br>
-
-1. The name of the file.<br>
-2. What directory the file was in.<br>
-3. When you last edited the file, or saw it in good condition; yesterday, last month, etc.<br>
-4. A file created during the day and deleted shortly thereafter is <b>gone</b>. It cannot be restored.<br><br>
-
-An operator will restore the file(s) into the directory `RESTORE` under your 
-home, usually by the next business day.<br>
-Please recover from there what you need, and delete what you don't.<br><br>
-
-A grace period of a week is usually granted before the RESTORE directory gets 
-deleted under your home (unless you have already done so).<br><br>
-
-We recommend you do your backup (sftp, scp to your own storage devices).</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
                 Can I use my laptop in the CS Labs?
                 <span class="arrow">&#9654;</span>
               </div>
@@ -464,70 +507,27 @@ Notes: If you want a copy of the original message to remain in your mailbox, sel
 
             <div class="faq-item">
               <div class="faq-question">
-                How do I transfer files to/from my PC?
+                What operating system does the server run?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">
-Use `sftp`, the secure version of the File Transfer Protocol that comes with 
-Windows and Mac OSes.  A PC client program, `psftp`, comes along with 
-PuTTY.<br><br>
-
-If you prefer an application with a graphical user interface (GUI).<br><br>
-
-For Windows and Mac users:<br>
----------------------------------------<br>
-[Filezilla] (https://sourceforge.net/projects/filezilla/).<br>
-[Cyberduck] (https://cyberduck.io/download/).<br><br>
-
-For Windows users:<br>
----------------------------<br>
-[WinSCP] (https://sourceforge.net/projects/winscp/).<br>
-[Bitvise] (https://www.bitvise.com/ssh-client-download).</div>
+              <div class="faq-answer">Users runs Ubuntu 24.04; most of our systems are Ubuntu. The CS lab Computers are Ubuntu 24.04 as well.</div>
             </div>
 
             <div class="faq-item">
               <div class="faq-question">
-                How do I check my disk usage on a Linux machine?
+                Where is the server located physically?
                 <span class="arrow">&#9654;</span>
               </div>
-              <div class="faq-answer">
-You can check your disk usage with the `du` command.<br>
-See `man du`.<br><br>
-
-The main thing to know is that the `-s` flag gives a sum for a subtree without 
-showing every subdir in it.<br><br>
-
-du -sh ~<br>
-K/M/G   /home/$USER<br><br>
-
-du -h --max-depth=1 ~<br><br>
-
-To see the size of files in the current directory, use the following command:<br><br>
-
-ls -sh<br><br>
-
-This will not show the size of an entire directory; use the du command for that.<br><br>
-
-To remove any directories that are too big and are just taking up space, like the 
-`.mozilla` and `.cache`, you can use the following command:<br><br>
-
-rm -rf <br><br>
-
-You can also remap your .cache directory to go into a nobackup space, which 
-does not affect your disk quota.<br><br>
-
-Copy and paste the commands shown below into a terminal session to do that:<br><br>
-
-cd ~<br>
-rm -rf .cache<br>
-mkdir -p /nobackup/students/$USER/.cache<br>
-ln -s !$ .cache<br>
-chmod 700 /nobackup/students/$USER<br><br>
-
-**This will delete the entire directory and its content. Please verify that 
-there is nothing important before executing.**</div>
+              <div class="faq-answer">The server is physically on campus, in the ISC Building.</div>
             </div>
 
+            <div class="faq-item">
+              <div class="faq-question">
+                How reliable is the server’s uptime?
+                <span class="arrow">&#9654;</span>
+              </div>
+              <div class="faq-answer">The server uptime is pretty reliable, although we had a memory error in January, which resulted in a reboot. Other than that, we usually reboot it once or twice a year, in between semesters.</div>
+            </div>
             <script>
               const faqItems = document.querySelectorAll('.faq-item');
 
