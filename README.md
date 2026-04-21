@@ -3,7 +3,7 @@
 Member Roles:
 - Hagop - Frequently Asked Questions (FAQ) Section
   + Responsible for adding common questions and their answers, which will help users find solutions immediately, rather than emailing the operator and having to wait. The FAQ of the old CS website only had 15 questions, and the questions themselves weren't commonly asked questions.
-  + Changes from cs.umb.edu: On the current CS Server Website, the FAQ tab is small and hard to find at the top right of the website. Additionally, the FAQ which are provided are not that frequently asked in my opinion, so I copied all of the current FAQ's but also added my own (which I got the responses to by emailing operator@cs.umb.edu). I also made the format of the FAQ section more modern and standard as a professional website would have.
+  + Changes from cs.umb.edu: On the current CS Server Website, the FAQ tab is small and hard to find at the top right of the website. Additionally, the FAQ which are provided are not that frequently asked in my opinion, so I copied all of the current FAQ's but also added my own (which I got the responses to by emailing operator@cs.umb.edu). I also made the format of the FAQ section more modern and standard, as a professional website would have. After the semester, I recommend adding more questions over time (which can be done easily if you look at FAQ.html on how each question is programmed) based on common questions which are sent to operator@cs.umb.edu
 - Manav - Student Resources Section
   + [Enter Longer Description of Artifact of Work]
   + Changes from cs.umb.edu:
