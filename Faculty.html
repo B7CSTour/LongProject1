@@ -1,1 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Faculty | CS Website Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        :root {
+            --bg: #f4f7fb;
+            --surface: #ffffff;
+            --dark-blue: #003366;
+            --nav-blue: #00509e;
+            --yellow: #f2c230;
+            --yellow-dark: #ddb11f;
+            --text-dark: #1a1a1a;
+            --text-mid: #4a4a4a;
+            --muted: #888;
+            --border: #ddd;
+            --mono: 'IBM Plex Mono', monospace;
+            --sans: 'IBM Plex Sans', sans-serif;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text-dark);
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            background-color: var(--nav-blue);
+            padding: 12px;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: 0.2s ease;
+        }
+
+        .navbar a:hover {
+            background-color: var(--yellow);
+            color: var(--dark-blue);
+        }
+
+        .navbar a.active {
+            background-color: var(--yellow);
+            color: var(--dark-blue);
+        }
+
+        .hero {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding: 3.5rem 1rem 3rem;
+        }
+
+        .hero-tag {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            color: var(--nav-blue);
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 1rem auto 0;
+            color: var(--text-mid);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .faculty-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 51, 102, 0.12);
+            border-color: var(--yellow);
+        }
+
+        .faculty-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-bottom: 0.9rem;
+            background: #f0f0f0;
+        }
+
+        .faculty-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.35rem;
+            color: var(--text-dark);
+        }
+
+        .faculty-card h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .faculty-card h3 a:hover {
+            color: var(--nav-blue);
+            text-decoration: underline;
+        }
+
+        .faculty-card .role {
+            font-weight: 600;
+            color: var(--nav-blue);
+            margin-bottom: 0.45rem;
+        }
+
+        .faculty-card .details {
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            line-height: 1.55;
+        }
+
+        .faculty-card .details a {
+            color: var(--nav-blue);
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .faculty-card .details a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.78rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 650px) {
+            .header {
+                font-size: 30px;
+                padding: 28px;
+            }
+
+            .faculty-card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        CS Website Tour
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Student_Resources.html">Student Resources</a>
+        <a href="Facilities.html">Facilities</a>
+        <a href="Tutorials.html">Tutorials</a>
+        <a href="Servers.html">How to Access CS Servers</a>
+        <a href="History.html">History</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Faculty.html" class="active">Faculty</a>
+    </div>
+
+    <div class="hero">
+        <div class="hero-tag">Computer Science Department</div>
+        <h1>Faculty</h1>
+        <p>
+            This page highlights Computer Science faculty at UMass Boston, including professors,
+            lecturers, and department leadership. The information below is based on the current
+            UMass Boston CS faculty page and reformatted to match our CS Website Tour design.
+        </p>
+    </div>
+
+    <div class="page">
+        <h2 class="section-title">Current Faculty</h2>
+
+        <div class="faculty-grid">
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/ozgun_babur.jpg" alt="Ozgun Babur">
+                <h3><a href="https://www.cs.umb.edu/~ozgun" target="_blank">Ozgun Babur</a></h3>
+                <div class="role">Assistant Professor</div>
+                <div class="details">
+                    Office: M-3-201-02<br>
+                    Email: <a href="mailto:ozgun.babur@umb.edu">ozgun.babur@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Temitayo_Banjo.jpg" alt="Temitayo Banjo">
+                <h3>Temitayo Banjo</h3>
+                <div class="role">Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-32<br>
+                    Phone: 617.287.6490<br>
+                    Email: <a href="mailto:temitayo.banjo@umb.edu">temitayo.banjo@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/stephen_chang.jpg" alt="Stephen Chang">
+                <h3><a href="https://www.cs.umb.edu/~stchang/" target="_blank">Stephen Chang</a></h3>
+                <div class="role">Assistant Professor</div>
+                <div class="details">
+                    Office: M-3-201-03<br>
+                    Email: <a href="mailto:stephen.chang@umb.edu">stephen.chang@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Tiago_Cogumbreiro.jpg" alt="Tiago Cogumbreiro">
+                <h3><a href="https://cogumbreiro.github.io/" target="_blank">Tiago Cogumbreiro</a></h3>
+                <div class="role">Associate Professor</div>
+                <div class="details">
+                    Office: M-3-201-16<br>
+                    Phone: 617-287-6479<br>
+                    Email: <a href="mailto:tiago.cogumbreiro@umb.edu">tiago.cogumbreiro@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Jane_Holly_DeBlois.jpg" alt="Jane H. DeBlois">
+                <h3><a href="https://www.cs.umb.edu/~hdeblois" target="_blank">Jane H. DeBlois</a></h3>
+                <div class="role">Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-32<br>
+                    Email: <a href="mailto:jane.deblois@umb.edu">jane.deblois@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Wei_Ding.jpg" alt="Wei Ding">
+                <h3><a href="http://www.cs.umb.edu/~ding" target="_blank">Wei Ding</a></h3>
+                <div class="role">Professor</div>
+                <div class="details">
+                    Office: M-3-201-7<br>
+                    Phone: 617.287.6428<br>
+                    Email: <a href="mailto:wei.ding@umb.edu">wei.ding@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Funda_Durupinar.jpg" alt="Funda Durupinar">
+                <h3><a href="http://www.cs.umb.edu/~fundad" target="_blank">Funda Durupinar</a></h3>
+                <div class="role">Associate Professor</div>
+                <div class="details">
+                    Office: M-3-201-08<br>
+                    Email: <a href="mailto:funda.durupinarbabur@umb.edu">funda.durupinarbabur@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Kenneth_K_Fletcher.jpg" alt="Kenneth Fletcher">
+                <h3>Kenneth Fletcher</h3>
+                <div class="role">Associate Professor</div>
+                <div class="details">
+                    Office: M-3-201-21<br>
+                    Email: <a href="mailto:kenneth.fletcher@umb.edu">kenneth.fletcher@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Gabriel_Ghinita.jpg" alt="Gabriel Ghinita">
+                <h3><a href="http://www.cs.umb.edu/~gghinita/" target="_blank">Gabriel Ghinita</a></h3>
+                <div class="role">Professor</div>
+                <div class="details">
+                    Office: M-3-201-19<br>
+                    Phone: 617.287.6479<br>
+                    Email: <a href="mailto:gabriel.ghinita@umb.edu">gabriel.ghinita@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Daniel_Haehn.jpg" alt="Daniel Haehn">
+                <h3><a href="http://www.cs.umb.edu/~haehn" target="_blank">Daniel Haehn</a></h3>
+                <div class="role">Associate Professor</div>
+                <div class="details">
+                    Office: M-3-201-20<br>
+                    Email: <a href="mailto:daniel.haehn@umb.edu">daniel.haehn@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/nurit_haspel.jpg" alt="Nurit Haspel">
+                <h3><a href="http://www.cs.umb.edu/~nurith" target="_blank">Nurit Haspel</a></h3>
+                <div class="role">Professor, Department Chair</div>
+                <div class="details">
+                    Office: M-3-201-09<br>
+                    Phone: 617-287-6414<br>
+                    Email: <a href="mailto:nurit.haspel@umb.edu">nurit.haspel@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Glenn_Hoffman.jpg" alt="Glenn Hoffman">
+                <h3><a href="http://www.cs.umb.edu/~ghoffman" target="_blank">Glenn Hoffman</a></h3>
+                <div class="role">IT Program Director, Senior Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-22<br>
+                    Phone: 617-287-6466<br>
+                    Email: <a href="mailto:glenn.hoffman@umb.edu">glenn.hoffman@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/swami.jpg" alt="Swami Iyer">
+                <h3><a href="http://www.cs.umb.edu/~siyer" target="_blank">Swami Iyer</a></h3>
+                <div class="role">Senior Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-14<br>
+                    Email: <a href="mailto:swaminathan.iyer@umb.edu">swaminathan.iyer@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Tales_Imbiriba.jpg" alt="Tales Imbiriba">
+                <h3><a href="https://talesimbiriba.github.io" target="_blank">Tales Imbiriba</a></h3>
+                <div class="role">Assistant Professor</div>
+                <div class="details">
+                    Office: M-3-201-04<br>
+                    Email: <a href="mailto:tales.imbiriba@umb.edu">tales.imbiriba@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Christopher_Kelly.jpg" alt="Christopher Kelly">
+                <h3>Christopher Kelly</h3>
+                <div class="role">Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-31<br>
+                    Email: <a href="mailto:christopher.kelly005@umb.edu">christopher.kelly005@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Xiaohui_Liang.jpg" alt="Xiaohui Liang">
+                <h3><a href="http://www.faculty.umb.edu/xiaohui.liang" target="_blank">Xiaohui Liang</a></h3>
+                <div class="role">Associate Professor</div>
+                <div class="details">
+                    Office: M-3-201-24<br>
+                    Phone: 617-287-6791<br>
+                    Email: <a href="mailto:xiaohui.liang@umb.edu">xiaohui.liang@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/tarikulislam_papon.jpg" alt="Tarikul Islam Papon">
+                <h3><a href="https://www.cs.umb.edu/~tpapon/" target="_blank">Tarikul Islam Papon</a></h3>
+                <div class="role">Assistant Professor</div>
+                <div class="details">
+                    Office: M-3-201-28<br>
+                    Email: <a href="mailto:T.Papon@umb.edu">T.Papon@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/amanda_potasznik.jpg" alt="Amanda Potasznik">
+                <h3><a href="https://blogs.umb.edu/potasznikresearch/" target="_blank">Amanda Potasznik</a></h3>
+                <div class="role">Senior Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-31<br>
+                    Phone: 617-287-6490<br>
+                    Email: <a href="mailto:amanda.potasznik@umb.edu">amanda.potasznik@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Bo_Sheng.jpg" alt="Bo Sheng">
+                <h3><a href="http://www.cs.umb.edu/~shengbo" target="_blank">Bo Sheng</a></h3>
+                <div class="role">Professor, Undergraduate Program Director</div>
+                <div class="details">
+                    Office: M-3-201-23<br>
+                    Phone: 617.287.6468<br>
+                    Email: <a href="mailto:bo.sheng@umb.edu">bo.sheng@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Dan_Simovici.jpg" alt="Dan Simovici">
+                <h3><a href="http://www.cs.umb.edu/~dsim" target="_blank">Dan Simovici</a></h3>
+                <div class="role">Professor, Graduate Program Director</div>
+                <div class="details">
+                    Office: M-3-201-05<br>
+                    Phone: 617-287-6472<br>
+                    Email: <a href="mailto:dan.simovici@umb.edu">dan.simovici@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Torna_Omar_Soro.jpg" alt="Torna Soro">
+                <h3><a href="https://www.cs.umb.edu/~tsoro/" target="_blank">Torna Soro</a></h3>
+                <div class="role">Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-32<br>
+                    Email: <a href="mailto:torna.soro001@umb.edu">torna.soro001@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Jun_Suzuki.jpg" alt="Jun Suzuki">
+                <h3><a href="http://www.cs.umb.edu/~jxs" target="_blank">Jun Suzuki</a></h3>
+                <div class="role">Associate Professor</div>
+                <div class="details">
+                    Office: M-3-201-15<br>
+                    Phone: 617.287.6462<br>
+                    Email: <a href="mailto:junichi.suzuki@umb.edu">junichi.suzuki@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Duc_Tran.jpg" alt="Duc Tran">
+                <h3><a href="http://www.cs.umb.edu/~duc" target="_blank">Duc Tran</a></h3>
+                <div class="role">Associate Professor</div>
+                <div class="details">
+                    Office: M-3-201-18<br>
+                    Phone: 617-287-6452<br>
+                    Email: <a href="mailto:duc.tran@umb.edu">duc.tran@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Yinxin_Wan.jpg" alt="Yinxin Wan">
+                <h3><a href="https://www.cs.umb.edu/~ywan/" target="_blank">Yinxin Wan</a></h3>
+                <div class="role">Assistant Professor</div>
+                <div class="details">
+                    Office: M-3-201-06<br>
+                    Email: <a href="mailto:yinxin.wan@umb.edu">yinxin.wan@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Shichao_Pei.jpg" alt="Shichao Pei">
+                <h3><a href="https://www.cs.umb.edu/~spei2/" target="_blank">Shichao Pei</a></h3>
+                <div class="role">Assistant Professor</div>
+                <div class="details">
+                    Office: M-3-201-05<br>
+                    Email: <a href="mailto:shichao.pei@umb.edu">shichao.pei@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/No_Photo_Available.jpg" alt="Zaihan Yang">
+                <h3>Zaihan Yang</h3>
+                <div class="role">Lecturer</div>
+                <div class="details">
+                    Email: <a href="mailto:zaihan.yang@umb.edu">zaihan.yang@umb.edu</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <img src="https://www.cs.umb.edu/WEB/images/people/Soheil_Sepahyar.jpg" alt="Soheil Sepahyar">
+                <h3><a href="https://soheilappear.github.io/soheilsepahyar/" target="_blank">Soheil Sepahyar</a></h3>
+                <div class="role">Lecturer</div>
+                <div class="details">
+                    Office: M-3-201-31<br>
+                    Email: <a href="mailto:soheil.sepahyar@umb.edu">soheil.sepahyar@umb.edu</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>CS Website Tour &mdash; Team 7 &mdash; Spring 2026</footer>
+
+</body>
+</html>
