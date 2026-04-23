@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="index.css">
@@ -17,13 +16,10 @@
             --dark-blue: #003366;
             --nav-blue: #00509e;
             --yellow: #f2c230;
-            --yellow-dark: #ddb11f;
             --text-dark: #1a1a1a;
             --text-mid: #4a4a4a;
             --muted: #888;
             --border: #ddd;
-            --accent: #00509e;
-            --accent-light: #e8f0fb;
             --sans: 'IBM Plex Sans', sans-serif;
             --mono: 'IBM Plex Mono', monospace;
         }
@@ -72,7 +68,14 @@
             color: var(--dark-blue);
         }
 
-        
+        .top-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0.75rem 1.5rem 0.25rem;
+            text-align: center;
+            height: auto;
+            min-height: 0;
+        }
 
         .section {
             background: var(--surface);
@@ -82,23 +85,16 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
 
-        .middle {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0.75rem 1.5rem 0.25rem;
-    text-align: center;
-}
-
-.category {
-    max-width: 1000px;
-    margin: 0.4rem auto;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.75rem 1.5rem;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    text-align: center;
-}
+        .category {
+            max-width: 1000px;
+            margin: 0.4rem auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
 
         .section-title {
             font-size: 1.15rem;
@@ -144,7 +140,7 @@
                 padding: 28px;
             }
 
-            .middle,
+            .top-section,
             .category {
                 padding-left: 1rem;
                 padding-right: 1rem;
@@ -170,7 +166,7 @@
     <a href="Faculty.html">Faculty</a>
 </div>
 
-<div class="middle">
+<div class="top-section">
     <div class="section">
         <div class="section-title">Facilities and Locations</div>
         <div class="section-content">
