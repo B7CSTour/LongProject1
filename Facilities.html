@@ -2,10 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" href="index.css">
-    <title>History - CS Website Tour</title>
+    <title>Facilities - CS Website Tour</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
 
         :root {
             --bg: #f4f7fb;
@@ -30,15 +34,7 @@
             color: var(--text-dark);
             min-height: 100vh;
         }
-        
-        li {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--dark-blue);
-    margin-top: 1rem;
-    list-style-type: none; /* removes bullets */
-}
- /* HEADER & NAVBAR — matches index.html exactly */
+
         .header {
             background-color: var(--dark-blue);
             color: white;
@@ -76,50 +72,82 @@
             color: var(--dark-blue);
         }
 
-        .intro-card strong { color: var(--text-dark); }
-
-        /* STATS ROW */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 1rem;
-            margin: 2.5rem 0;
+        .middle {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 1rem;
+            text-align: center;
         }
 
-        .stat-card {
+        .section {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.1rem;
-            text-align: center;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
 
-        .stat-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark-blue);
-            font-family: var(--mono);
+        .category {
+            max-width: 1000px;
+            margin: 1.5rem auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            text-align: center;
         }
 
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--muted);
-            margin-top: 0.3rem;
-        }
-
-        /* SECTION TITLE */
         .section-title {
             font-size: 1.15rem;
             font-weight: 700;
-            margin: 2rem 0 1rem;
+            margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--yellow);
             display: inline-block;
             color: var(--dark-blue);
         }
 
-       
+        .section-content {
+            font-size: 1rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-top: 1.25rem;
+        }
+
+        .details {
+            margin-top: 0.4rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 650px) {
+            .header {
+                font-size: 30px;
+                padding: 28px;
+            }
+
+            .middle,
+            .category {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -128,67 +156,71 @@
 <div class="header">
     Facilities
 </div>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="Student_Resources.html">Student Resources</a>
-        <a href="Facilities.html" class="active">Facilities</a>
-        <a href="Tutorials.html">Tutorials</a>
-        <a href="Servers.html">How to Access CS Servers</a>
-        <a href="History.html">History</a>
-        <a href="FAQ.html">FAQ</a>
-        <a href="Faculty.html">Faculty</a>
-    </div>
-<div class="middle">
 
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="Student_Resources.html">Student Resources</a>
+    <a href="Facilities.html" class="active">Facilities</a>
+    <a href="Tutorials.html">Tutorials</a>
+    <a href="Servers.html">How to Access CS Servers</a>
+    <a href="History.html">History</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="Faculty.html">Faculty</a>
+</div>
+
+<div class="middle">
     <div class="section">
         <div class="section-title">Facilities and Locations</div>
-
         <div class="section-content">
             Information regarding facilities within the CS Department.
         </div>
-
     </div>
-    
 </div>
 
 <div class="category">
-	<div class="section-title">Lab Rooms</div>
+    <div class="section-title">Offices & Administrative Building</div>
     <div class="section-content">
-    Computer Labs in the CS Department and its features
-    	<ul>
-        	<li>UNIX LAB - McCormack 03-731</li>
-            	24/7 Access<br>
-            	Use for help with accessing the linux servers<br>
-                44 Computers, 22 run Windows, 22 run Linux
-                <br>
-            <li>Web Lab - McCormack 03-732</li>
-            	 19 PCs<br>
-                 1 White Board<br>
-                 1 White Screen<br>
-           	<li>IT Lab - McCormack 03-730</li>
-            	20 PCs<br>
-                1 White Screen<br>
-                1 White Board<br>
-                1 LCD Laser Projector<br>                            	            	 
-        </ul>
+        Location of the main Computer Science department office and administrative space.
     </div>
 
-</div>
-
-<div class ="category">
-	<div class="section-title">Offices & Administrative Building</div>
-    <div class="section-content">
-    Location of Main CS Department and Professors
-    </div>
     <ul>
-    	<li>Administrative Office</li>
-        	McCormack 03-201<br>
-        
-        
+        <li>Administrative Office</li>
+        <div class="details">
+            McCormack 03-201
+        </div>
     </ul>
 </div>
 
+<div class="category">
+    <div class="section-title">Lab Rooms</div>
+    <div class="section-content">
+        Computer labs in the CS Department and their features.
+    </div>
 
+    <ul>
+        <li>UNIX LAB - McCormack 03-731</li>
+        <div class="details">
+            24/7 Access<br>
+            Used for help with accessing the Linux servers<br>
+            44 computers, 22 run Windows and 22 run Linux
+        </div>
+
+        <li>Web Lab - McCormack 03-732</li>
+        <div class="details">
+            19 PCs<br>
+            1 White Board<br>
+            1 White Screen
+        </div>
+
+        <li>IT Lab - McCormack 03-730</li>
+        <div class="details">
+            20 PCs<br>
+            1 White Screen<br>
+            1 White Board<br>
+            1 LCD Laser Projector
+        </div>
+    </ul>
+</div>
 
 </body>
 </html>
