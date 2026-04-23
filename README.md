@@ -7,9 +7,9 @@ Member Roles:
 - Manav - Student Resources Section - <Enter FileName Here>
   + [Enter Longer Description of Artifact of Work]
   + Changes from cs.umb.edu: student_resources.html
-- John - Facilities & Locations Update - <Enter FileName Here>
-  + [Enter Longer Description of Artifact of Work]
-  + Changes from cs.umb.edu:
+- John - Facilities & Locations Update - Facilities.html
+  + Responsible for giving the locations of the CS department on campus and where on the map that they are located. Specifically, adding where all the CS buildings are located within McCormack, including the administation office, space for professors, and the locations of the lab facilities.
+  + Changes from cs.umb.edu: Included a picture of McCormack hall on the website with the location of each building circled in red. Also different from the website was placing the location of the main office and the labs in one section of the website instead of differing sections.
 - Krishna - Media & Video Tour - <Enter FileName Here>
   + [Enter Longer Description of Artifact of Work]
   + Changes from cs.umb.edu:
