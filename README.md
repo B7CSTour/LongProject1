@@ -22,6 +22,3 @@ Member Roles:
 - Martin - CS Servers & Technical Resources - <Enter FileName Here>
   + [Enter Longer Description of Artifact of Work]
   + Changes from cs.umb.edu:
-
-TO DO LIST:
-- Add what the website does overall based on client's request in the Home section of the website.
