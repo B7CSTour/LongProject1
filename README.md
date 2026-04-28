@@ -16,9 +16,9 @@ Member Roles:
 - Roshan - Web design & Navigation - <Enter FileName Here>
   + [Enter Longer Description of Artifact of Work]
   + Changes from cs.umb.edu:
-- Muhammad - Website Content Review - <Enter FileName Here>
+- Muhammad - Website Content Review - <Enter fileName Here>
   + Responsible for conducting a comprehensive review of the existing CS department website to assess its content quality, structure, and completness. This involved a thorough analysis of the UMass Boston CS website to benchmark content standards and identify gaps in our own site.So, based on that developed the homepage for the CS website tour, crafting an engaging and informative landing experience that reflects the department's identity and goals. Additionally, developed the History tab documenting all key events in the CS department's history including it's founding, major program expansion and other landmark moments.
-  + Changes from cs.umb.edu:
+  + Changes from cs.umb.edu: Restructured the overall homepage layout to improve visual flow and user expereince. The redisigned homepage organizes content into clearly defined sections that make key information immediately accessible to visitors. Replaced and refreshed the homepage images to better represent the CS department and UMass Boston campus, the orignal site uses generic visuals. Created an entirely new History tab that was not availabe in cs.umb.edu. This page consists the full history of the UMass Boston CS department.
 - Martin - CS Servers & Technical Resources - Servers.html
   + Responsible for adding information regarding functionalities of the server, along with instructions for logging on and streamlining access.
   + Changes from cs.umb.edu: Current website had instructions for remotely accessing the network under the FAQ section. I included this information, alongside resources available on the server (pdfTeX, Emacs) and ways to simplify accessing it (ssh extension on VSCode, passwordless login with ssh key) on a dedicated page. Further additions could include cheat sheets for linux commands, emacs, and pdfTeX, maybe mentioning nano as well. 
