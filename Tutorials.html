@@ -211,7 +211,85 @@ cs110  cs210  cs310  cs410  myproject  public_html</pre>
     </div>
 
     <p style="margin-top: 20px;"><strong>Still having issues?</strong> Contact the CS department help desk or email <a href="mailto:cs-support@umb.edu">cs-support@umb.edu</a> for assistance.</p>
+<hr style="margin: 30px 0; border: 1px solid #ccc;">
 
+    <h2>Pro Tips: Keyboard Shortcuts & Command History</h2>
+    <p>Master these time-saving shortcuts to work more efficiently on the CS server:</p>
+
+    <h3>⌨️ Essential Keyboard Shortcuts</h3>
+    <div style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; padding: 20px; margin: 15px 0;">
+        <table style="width: 100%; font-size: 14px;">
+            <tr>
+                <td style="padding: 8px 0; width: 30%;"><strong>Ctrl + C</strong></td>
+                <td style="padding: 8px 0;">Cancel/stop the current command</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;"><strong>Ctrl + D</strong></td>
+                <td style="padding: 8px 0;">Log out of the SSH session (same as typing <code>exit</code>)</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;"><strong>Ctrl + L</strong></td>
+                <td style="padding: 8px 0;">Clear the terminal screen (same as typing <code>clear</code>)</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;"><strong>Ctrl + A</strong></td>
+                <td style="padding: 8px 0;">Move cursor to the beginning of the line</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;"><strong>Ctrl + E</strong></td>
+                <td style="padding: 8px 0;">Move cursor to the end of the line</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;"><strong>Ctrl + U</strong></td>
+                <td style="padding: 8px 0;">Delete everything before the cursor</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;"><strong>Ctrl + K</strong></td>
+                <td style="padding: 8px 0;">Delete everything after the cursor</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0;"><strong>Tab</strong></td>
+                <td style="padding: 8px 0;">Auto-complete file/directory names and commands</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>🕐 Command History Navigation</h3>
+    <div style="background-color: #e7f3ff; border: 1px solid #b3d9ff; border-radius: 5px; padding: 20px; margin: 15px 0;">
+        <p><strong>Arrow Keys:</strong></p>
+        <ul style="margin: 10px 0;">
+            <li><strong>↑ (Up Arrow)</strong> - View previous command in history</li>
+            <li><strong>↓ (Down Arrow)</strong> - View next command in history</li>
+        </ul>
+        
+        <p style="margin-top: 20px;"><strong>History Command:</strong></p>
+        <pre style="background-color: #1a1a2e; color: #00ff00; padding: 15px; border-radius: 5px; font-size: 14px; overflow-x: auto; margin: 10px 0;">
+krishna@pe15:~$ history
+  498  cd cs410
+  499  ls
+  500  cat R18.txt
+  501  pwd
+  502  history</pre>
+        
+        <p style="margin-top: 15px;"><strong>Useful History Tricks:</strong></p>
+        <ul style="margin: 10px 0;">
+            <li><code>!!</code> - Run the last command again</li>
+            <li><code>!500</code> - Run command number 500 from history</li>
+            <li><code>!cat</code> - Run the most recent command starting with "cat"</li>
+            <li><code>Ctrl + R</code> - Search through command history (type to search, Enter to run)</li>
+        </ul>
+    </div>
+
+    <h3>💡 Bonus Tips</h3>
+    <div style="background-color: #fff9e6; border: 1px solid #ffe599; border-radius: 5px; padding: 20px; margin: 15px 0;">
+        <ul style="margin: 0;">
+            <li><strong>Use Tab completion:</strong> Type the first few letters of a file/directory name and press Tab to auto-complete. If multiple matches exist, press Tab twice to see all options.</li>
+            <li><strong>Copy/Paste in terminal:</strong> Right-click to paste in PowerShell. Some terminals use <code>Ctrl+Shift+C</code> and <code>Ctrl+Shift+V</code> instead of Ctrl+C/V.</li>
+            <li><strong>Clear screen quickly:</strong> Instead of typing <code>clear</code>, just press <code>Ctrl + L</code>.</li>
+            <li><strong>Exit without typing:</strong> Press <code>Ctrl + D</code> to log out instead of typing <code>exit</code>.</li>
+            <li><strong>Fix typos fast:</strong> Use <code>Ctrl + A</code> to jump to the start of a long command to fix a mistake at the beginning.</li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
